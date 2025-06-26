@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Favorite Artists & Bands | Tracy's</title>
+  <style>
+    body{
+      margin:0;
+      font-family:'Arial Rounded MT Bold',sans-serif;
+      background:url('bg3.jpg') center/cover no-repeat fixed;
+    }
+
+
+    nav{
+      background:#ffb6c1;
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      padding:15px 0;
+    }
+    nav a{
+      color:#6d4e2e;
+      text-decoration:none;
+      font-size:1.3rem;
+      font-weight:bold;
+      padding:8px 16px;
+      border-radius:10px;
+    }
+    nav a.active{
+      background:#6d4e2e;
+      color:#fbd4de;
+    }
+
+    .container{
+      max-width:1400px;
+      margin:40px auto;
+      padding:20px;
+      text-align:center;
+    }
+    h1{
+      font-size:2rem;
+      color:#6d4e2e;
+      margin-bottom:30px;
+      background:#ffb6c1;
+      display:inline-block;
+      padding:10px 22px;
+      border-radius:20px;
+      box-shadow:0 3px 8px rgba(0,0,0,.15);
+    }
+
+
+    .frame-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:40px;
+      justify-items:center;
+    }
+    .frame{
+      width:180px;height:180px;
+      background:#ffb6c1;
+      border-radius:20px;
+      box-shadow:4px 4px 10px rgba(0,0,0,.2);
+      transform:rotate(-5deg);
+      overflow:hidden;
+      transition:transform .4s;
+      cursor:pointer;
+    }
+    .frame:nth-child(even){transform:rotate(5deg);}
+    .frame:hover,
+    .frame:active{
+      transform:scale(1.1) rotate(0);
+      z-index:2;
+    }
+    .frame img{
+      width:100%;height:100%;
+      object-fit:cover;
+      border-radius:20px;
+    }
+
+    .label{
+      margin-top:10px;
+      padding:6px 10px;
+      font-size:1rem;
+      background:#ffb6c1;
+      color:#6d4e2e;
+      border-radius:12px;
+      display:inline-block;
+    }
+
+    .artists-btn{
+      position:fixed;
+      bottom:30px;right:30px;
+      padding:14px 26px;
+      background:#6d4e2e;
+      color:#fbd4de;
+      font-size:1.2rem;
+      font-weight:bold;
+      border:none;
+      border-radius:20px;
+      text-decoration:none;
+      cursor:pointer;
+      transition:transform .3s,box-shadow .3s,background .3s;
+      box-shadow:
+        0 0 8px #6d4e2e,
+        0 0 16px #6d4e2e;  
+      z-index:1000;
+    }
+    .artists-btn:hover{
+      background:#8d6347;
+      transform:scale(1.05);
+      box-shadow:
+        0 0 10px #fbd4de,
+        0 0 20px #fbd4de;   
+    }
+
+
+    #popup{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.8);
+      justify-content:center;
+      align-items:center;
+      z-index:2000;
+      cursor:pointer;
+    }
+    #popup img{
+      max-width:80%;
+      max-height:80%;
+      border-radius:20px;
+      box-shadow:0 0 20px #ff87b5;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">۶ৎ Home ۶ৎ</a>
+    <a href="nowplaying.html">𝄞˚⊹Now Playing‧˚♪</a>
+    <a href="favorites-songs.html" class="active">♡ Favorites! ♡</a>
+    <a href="lyrics.html">✿.Lyrics ୭˚</a>
+  </nav>
+
+  <div class="container">
+    <h1>Favorite Artists₍^. .^₎Ⳋ</h1>
+
+    <div class="frame-grid">
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="— one direction 🍁.jpg" alt="One Direction"></div>
+        <div class="label">One Direction</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="★5 Seconds of Summer.jpg" alt="5SOS"></div>
+        <div class="label">5 Seconds of Summer</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="5SOS and 1D.jpg" alt="5SOS x 1D"></div>
+        <div class="label">5SOS × 1D</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="ldrr.jpg" alt="Lana Del Rey"></div>
+        <div class="label">Lana Del Rey</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="mitski lush photoshoot.jpg" alt="Mitski"></div>
+        <div class="label">Mitski</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="download (64).jpg" alt="Fiona Apple"></div>
+        <div class="label">Fiona Apple</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="nrvn.jpg" alt="Nirvana"></div>
+        <div class="label">Nirvana</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="3.jpg" alt="Deftones"></div>
+        <div class="label">Deftones</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="━☾.jpg" alt="BTS"></div>
+        <div class="label">BTS</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="★ mazzy star - hope sandoval & david roback_.jpg" alt="Mazzy Star"></div>
+        <div class="label">Mazzy Star</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="b58289ba-cb0f-4f56-985f-45548231fe6e.jpg" alt="Ariana Grande"></div>
+        <div class="label">Ariana Grande</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="download (63).jpg" alt="Clairo"></div>
+        <div class="label">Clairo</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="download (65).jpg" alt="The Smiths"></div>
+        <div class="label">The Smiths</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="download (66).jpg" alt="SEVENTEEN"></div>
+        <div class="label">SEVENTEEN</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="download (68).jpg" alt="Blur"></div>
+        <div class="label">Blur</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="metallica — the Cliff years.jpg" alt="Metallica"></div>
+        <div class="label">Metallica</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="The Cure.jpg" alt="The Cure"></div>
+        <div class="label">The Cure</div>
+      </div>
+
+      <div onclick="openPopup(this)">
+        <div class="frame"><img src="Veruca Salt.jpg" alt="Veruca Salt"></div>
+        <div class="label">Veruca Salt</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup" onclick="closePopup()">
+    <img id="popup-img" src="" alt="Full Image">
+  </div>
+
+  <a href="favorites-songs.html" class="artists-btn">Back to Songs</a>
+
+  <script>
+    function openPopup(card){
+      const src = card.querySelector('img').src;
+      document.getElementById('popup-img').src = src;
+      document.getElementById('popup').style.display='flex';
+    }
+    function closePopup(){
+      document.getElementById('popup').style.display='none';
+    }
+  </script>
+
+</body>
+</html>
+

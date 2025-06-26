@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Now Playing - Radio Style | Tracy's</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial Rounded MT Bold', sans-serif;
+      background-color: #f7b6c2;
+    }
+
+    nav {
+      background-color: #6d4e2e;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #fbd4de;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 10px;
+    }
+
+    nav a.active {
+      background-color: #fbd4de;
+      color: #6d4e2e;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .radio {
+      background-color: #ffe4e9;
+      border: 6px solid #6d4e2e;
+      border-radius: 30px;
+      padding: 30px;
+      width: 700px;
+      margin: 0 auto;
+      position: relative;
+      box-shadow: 6px 6px 15px rgba(109, 78, 46, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    
+    .light {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 15px;
+  height: 15px;
+  background-color: #f77aa5;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 4px #f77aa5;
+  animation: blink 1.5s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 10px 4px #f77aa5;
+  }
+  50% {
+    opacity: 0.4;
+    box-shadow: 0 0 4px 1px #f77aa5;
+  }
+}
+
+    .speaker {
+      width: 60px;
+      height: 380px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #f6d97b,
+        #f6d97b 10px,
+        #d4b34f 10px,
+        #d4b34f 20px
+      );
+      border-radius: 15px;
+      box-shadow: inset 0 0 0 2px #6d4e2e;
+    }
+
+    .player-area {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 12px;
+      width: 500px;
+      height: 380px;
+    }
+
+    .knobs {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .knob {
+      width: 35px;
+      height: 35px;
+      background-color: #f6d97b;
+      border: 3px solid #6d4e2e;
+      border-radius: 50%;
+    }
+
+    .note {
+      margin-top: 25px;
+      color: #5c3c22;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">۶ৎ Home ۶ৎ</a>
+    <a href="nowplaying.html" class="active">𝄞˚⊹Now Playing‧˚♪</a>
+    <a href="favorites-songs.html">♡ Favorites! ♡</a>
+    <a href="lyrics.html">✿.Lyrics ୭˚</a>
+  </nav>
+
+  <div class="container">
+    <div class="radio">
+      <div class="light"></div>
+        <div class="speaker"></div>
+
+      <div class="player-area">
+        <iframe 
+         src="https://open.spotify.com/embed/playlist/2W1Yn1Yoe1AmTAwrSo5Khg?utm_source=generator" 
+         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+         loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="knobs">
+        <div class="knob"></div>
+        <div class="knob"></div>
+      </div>
+    </div>
+
+    <div class="note">Feel free to explore my recent playlist! ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</div>
+  </div>
+
+</body>
+</html>

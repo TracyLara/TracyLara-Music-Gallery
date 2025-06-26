@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Tracy's Music Player!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: url('bg3.jpg') center/cover no-repeat;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      position: relative;
+    }
+
+    .center-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 1200px;
+      text-align: center;
+    }
+
+    .welcome-image {
+      width: 100%;
+      aspect-ratio: 3 / 1;
+      background: url('Welcome_to_Pastel_Pastries___3_-removebg-preview (1).png') 
+                  center/contain no-repeat;
+    }
+
+    .explore-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 160px;
+      height: 60px;
+      background-color: #ffb6d1;
+      color: #6d4e2e;
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 1.4rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      box-shadow:
+        0 0 10px #ffb6d1,
+        0 0 20px #f78da7,
+        0 0 30px #f78da7;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .explore-btn:hover {
+      transform: scale(1.05);
+      box-shadow:
+        0 0 15px #ffb6d1,
+        0 0 30px #f78da7,
+        0 0 45px #f78da7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="center-content">
+    <div class="welcome-image"></div>
+  </div>
+
+  <button class="explore-btn" onclick="window.location.href='nowplaying.html'">
+    Explore!
+  </button>
+
+</body>
+</html>

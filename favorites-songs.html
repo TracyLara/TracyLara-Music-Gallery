@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Favorite Songs - Vinyl Records | Tracy's</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial Rounded MT Bold', sans-serif;
+      background-color: #f7b6c2;
+    }
+
+    nav {
+      background-color: #6d4e2e;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #fbd4de;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 10px;
+    }
+
+    nav a.active {
+      background-color: #fbd4de;
+      color: #6d4e2e;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #6d4e2e;
+      margin-bottom: 30px;
+    }
+
+    .vinyl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .vinyl {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #000;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.8s ease;
+      cursor: pointer;
+    }
+
+    .vinyl:hover,
+    .vinyl.clicked {
+      transform: rotate(360deg);
+    }
+
+    .vinyl img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .vinyl::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      background-color: #111;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .title {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #5c3c22;
+      max-width: 120px;
+      word-wrap: break-word;
+    }
+
+    .artists-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 14px 26px;
+      background-color: #6d4e2e;
+      color: #fbd4de;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 12px rgba(109, 78, 46, 0.8);
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s;
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    .artists-btn:hover {
+      background-color: #8d6347;
+      box-shadow: 0 0 16px #6d4e2e;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">۶ৎ Home ۶ৎ</a>
+    <a href="nowplaying.html">𝄞˚⊹Now Playing‧˚♪</a>
+    <a href="favorites.html" class="active">♡ Favorites! ♡</a>
+    <a href="lyrics.html">✿.Lyrics ୭˚</a>
+  </nav>
+
+  <div class="container">
+    <h1>𝄞˚⊹Songs on Repeat Lately !‧˚♪</h1>
+    <div class="vinyl-grid">
+      
+      <div>
+        <div class="vinyl"><img src="50a3b59b3cc71f9f3369b080d2e47676.1000x1000x1.png" alt="Song 1" /></div>
+        <div class="title">"Please Please Please..."<br>By Deftones</div>
+      </div>
+
+      <div><div class="vinyl"><img src="ab67616d0000b273c4c4a5d82534d5e6b2ed349a.jpg" /></div><div class="title">"The End of the World"<br>By Skeeter Davis</div></div>
+
+      <div><div class="vinyl"><img src="81a965422d7b7c42c269705cdcf35552.1000x1000x1.jpg" /></div><div class="title">"Perfect Girl"<br>By The Cure</div></div>
+
+      <div><div class="vinyl"><img src="930fef887c9950bf24b40868b1ca7e68.999x999x1.jpg" /></div><div class="title">"Pictures Of You"<br>By The Cure</div></div>
+
+      <div><div class="vinyl"><img src="6a931eb0bbce0cfd6849d5bb7883e654.1000x1000x1.jpg" /></div><div class="title">"Don't Know Why"<br>By Norah Jones</div></div>
+
+      <div><div class="vinyl"><img src="1200x1200bf-60.jpg" /></div><div class="title">"The Other Woman"<br>By Lana Del Rey</div></div>
+
+      <div><div class="vinyl"><img src="Chelsea Girl.jpg" /></div><div class="title">"Nico"<br>By Chelsea Girls</div></div>
+
+      <div><div class="vinyl"><img src="Dummy - Portishead.jpg" /></div><div class="title">"Sour Times"<br>By Portishead</div></div>
+
+      <div><div class="vinyl"><img src="Extraordinary Machine By Fiona Apple.jpg" /></div><div class="title">"Please Please Please"<br>By Fiona Apple</div></div>
+
+      <div><div class="vinyl"><img src="image-8.png" /></div><div class="title">"Angelene"<br>By Pj Harvey</div></div>
+
+      <div><div class="vinyl"><img src="jane.jpg" /></div><div class="title">"Ex-fan des sixties"<br>By Jane Birkin</div></div>
+
+      <div><div class="vinyl"><img src="RadioheadTheBends600-2.jpg" /></div><div class="title">"Fake Plastic Trees"<br>By Radiohead</div></div>
+
+      <div><div class="vinyl"><img src="Smoke city - Flying away.jpg" /></div><div class="title">"Giulietta - Interlude 2"<br>By Smoke City</div></div>
+
+      <div><div class="vinyl"><img src="Song 2 - 2012 Remaster.jpg" /></div><div class="title">"Beetlebum"<br>By Blur</div></div>
+
+      <div><div class="vinyl"><img src="🍎.jpg" /></div><div class="title">"Hardly Ever Smile"<br>By Poison Girl Friend</div></div>
+
+      <div><div class="vinyl"><img src="ldr.jpg" /></div><div class="title">"Cherry"<br>By Lana Del Rey</div></div>
+
+      <div><div class="vinyl"><img src="download (61).jpg" /></div><div class="title">"Summer Love"<br>By One Direction</div></div>
+
+      <div><div class="vinyl"><img src="Midnight Memories (Deluxe Edition) by One Direction on Apple Music.jpg" /></div><div class="title">"Little White Lies"<br>By One Direction</div></div>
+
+      <div><div class="vinyl"><img src="portada FOUR.jpg" /></div><div class="title">"Fool's Gold"<br>By One Direction</div></div>
+
+      <div><div class="vinyl"><img src="download (62).jpg" /></div><div class="title">"End Up Here"<br>By 5SOS</div></div>
+
+      <div><div class="vinyl"><img src="Hole - Live Through This.jpg" /></div><div class="title">"Doll Parts"<br>By Hole</div></div>
+
+      <div><div class="vinyl"><img src="I want it now!.jpg" /></div><div class="title">"Seether"<br>By Veruca Salt</div></div>
+
+      <div><div class="vinyl"><img src="awesome group, created some of the eeriest music to accompany the best movie.jpg" /></div><div class="title">"Bathroom Girl"<br>By Air</div></div>
+
+      <div><div class="vinyl"><img src="cw.jpg" /></div><div class="title">"Cherry Waves"<br>By Deftones</div></div>
+
+      <div><div class="vinyl"><img src="Lana del rey.jpg" /></div><div class="title">"Your Girl-Unreleased"<br>By Lana Del Rey</div></div>
+
+    </div>
+  </div>
+
+  <a href="favorites-artists.html" class="artists-btn">Artists</a>
+
+  <script>
+    document.querySelectorAll('.vinyl').forEach(vinyl => {
+      vinyl.addEventListener('click', () => {
+        vinyl.classList.remove('clicked');
+        void vinyl.offsetWidth;
+        vinyl.classList.add('clicked');
+      });
+    });
+  </script>
+
+</body>
+</html>
